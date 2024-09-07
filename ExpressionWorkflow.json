@@ -1,0 +1,203 @@
+{
+  "last_node_id": 33,
+  "last_link_id": 40,
+  "nodes": [
+    {
+      "id": 15,
+      "type": "LoadImage",
+      "pos": [
+        776,
+        367
+      ],
+      "size": {
+        "0": 210,
+        "1": 314
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            19
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "Alexisk-0011 (1).png",
+        "image"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 33,
+      "type": "SaveImage",
+      "pos": [
+        1351,
+        374
+      ],
+      "size": {
+        "0": 257.8363037109375,
+        "1": 270
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 40
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ExpressionEditing"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 14,
+      "type": "ExpressionEditor",
+      "pos": [
+        1044,
+        363
+      ],
+      "size": {
+        "0": 260.81048583984375,
+        "1": 690
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "src_image",
+          "type": "IMAGE",
+          "link": 19
+        },
+        {
+          "name": "motion_link",
+          "type": "EDITOR_LINK",
+          "link": null
+        },
+        {
+          "name": "sample_image",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "add_exp",
+          "type": "EXP_DATA",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            40
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "motion_link",
+          "type": "EDITOR_LINK",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "save_exp",
+          "type": "EXP_DATA",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ExpressionEditor"
+      },
+      "widgets_values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        24.5,
+        0,
+        0,
+        0,
+        0,
+        15,
+        0,
+        1,
+        1,
+        "All",
+        1.7000000000000002
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    }
+  ],
+  "links": [
+    [
+      19,
+      15,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      40,
+      14,
+      0,
+      33,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Simple facial expression editing",
+      "bounding": [
+        745,
+        261,
+        896,
+        835
+      ],
+      "color": "#88A",
+      "font_size": 30,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.1671841070450022,
+      "offset": [
+        -524.0691701914095,
+        -303.6377955093686
+      ]
+    }
+  },
+  "version": 0.4
+}
