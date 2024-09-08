@@ -1,0 +1,2259 @@
+{
+  "last_node_id": 104,
+  "last_link_id": 210,
+  "nodes": [
+    {
+      "id": 73,
+      "type": "Primitive integer [Crystools]",
+      "pos": [
+        -2586.961692469737,
+        1181.7579780934227
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "int",
+          "type": "INT",
+          "links": [
+            167,
+            169
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "整数"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Primitive integer [Crystools]"
+      },
+      "widgets_values": [
+        15
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 75,
+      "type": "CM_IntToFloat",
+      "pos": [
+        -1454,
+        254
+      ],
+      "size": {
+        "0": 210,
+        "1": 34
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 169,
+          "widget": {
+            "name": "a"
+          },
+          "label": "A"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            170,
+            201,
+            202,
+            204
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "浮点"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CM_IntToFloat"
+      },
+      "widgets_values": [
+        0
+      ]
+    },
+    {
+      "id": 92,
+      "type": "Primitive integer [Crystools]",
+      "pos": [
+        -2582.2161380770917,
+        1333.370589494166
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "int",
+          "type": "INT",
+          "links": [
+            187,
+            188
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "整数"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Primitive integer [Crystools]"
+      },
+      "widgets_values": [
+        100
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 83,
+      "type": "ImpactImageBatchToImageList",
+      "pos": [
+        -315,
+        450
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 175,
+          "label": "图像"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            209
+          ],
+          "slot_index": 0,
+          "shape": 6,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactImageBatchToImageList"
+      }
+    },
+    {
+      "id": 91,
+      "type": "ImpactImageBatchToImageList",
+      "pos": [
+        -308,
+        537
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 185,
+          "label": "图像"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            210
+          ],
+          "slot_index": 0,
+          "shape": 6,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactImageBatchToImageList"
+      }
+    },
+    {
+      "id": 5,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        -3744.6777266776357,
+        944.0794789105499
+      ],
+      "size": [
+        483.37789669775884,
+        651.4044553664993
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "label": "批次管理"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_load_cap",
+          "type": "INT",
+          "link": 188,
+          "widget": {
+            "name": "frame_load_cap"
+          },
+          "label": "帧数读取上限"
+        },
+        {
+          "name": "force_rate",
+          "type": "INT",
+          "link": 190,
+          "widget": {
+            "name": "force_rate"
+          },
+          "label": "强制帧率"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            152,
+            163
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": [
+            161
+          ],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "帧计数"
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "links": null,
+          "slot_index": 2,
+          "shape": 3,
+          "label": "音频"
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": [
+            162
+          ],
+          "slot_index": 3,
+          "shape": 3,
+          "label": "视频信息"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "456.mp4",
+        "force_rate": 30,
+        "force_size": "Disabled",
+        "custom_width": 512,
+        "custom_height": 512,
+        "frame_load_cap": 40,
+        "skip_first_frames": 60,
+        "select_every_nth": 2,
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "frame_load_cap": 40,
+            "skip_first_frames": 60,
+            "force_rate": 30,
+            "filename": "456.mp4",
+            "type": "input",
+            "format": "video/mp4",
+            "select_every_nth": 2
+          }
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 89,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        -3212.7546620689354,
+        943.1655553176756
+      ],
+      "size": [
+        547.4979074709754,
+        653.9879674058216
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "label": "批次管理"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_load_cap",
+          "type": "INT",
+          "link": 187,
+          "widget": {
+            "name": "frame_load_cap"
+          },
+          "label": "帧数读取上限"
+        },
+        {
+          "name": "force_rate",
+          "type": "INT",
+          "link": 189,
+          "widget": {
+            "name": "force_rate"
+          },
+          "label": "强制帧率"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            185,
+            195
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null,
+          "shape": 3,
+          "label": "帧计数"
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            180,
+            199
+          ],
+          "slot_index": 2,
+          "shape": 3,
+          "label": "音频"
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": null,
+          "shape": 3,
+          "label": "视频信息"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "555 截取视频.mp4",
+        "force_rate": 30,
+        "force_size": "Disabled",
+        "custom_width": 512,
+        "custom_height": 512,
+        "frame_load_cap": 20,
+        "skip_first_frames": 0,
+        "select_every_nth": 2,
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "frame_load_cap": 20,
+            "skip_first_frames": 0,
+            "force_rate": 30,
+            "filename": "555 截取视频.mp4",
+            "type": "input",
+            "format": "video/mp4",
+            "select_every_nth": 2
+          }
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 93,
+      "type": "Primitive integer [Crystools]",
+      "pos": [
+        -2586,
+        1030
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "int",
+          "type": "INT",
+          "links": [
+            189,
+            190
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "整数"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Primitive integer [Crystools]"
+      },
+      "widgets_values": [
+        30
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [
+        -4318,
+        961
+      ],
+      "size": [
+        528.5467534721988,
+        631.6532969349394
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            154
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "微信截图_20240706101601.png",
+        "image"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 98,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1574.1861262399505,
+        1504.264182527413
+      ],
+      "size": [
+        815.5956420898438,
+        234
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 203,
+          "label": "图像"
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null,
+          "label": "音频"
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "label": "批次管理"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "link": 204,
+          "widget": {
+            "name": "frame_rate"
+          },
+          "label": "帧率"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3,
+          "label": "文件名"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 15,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pingpong": true,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00072.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 15
+          }
+        }
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 37,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        -206.8138737600502,
+        1486.264182527413
+      ],
+      "size": {
+        "0": 210,
+        "1": 258
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 114,
+          "label": "图像"
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null,
+          "label": "音频"
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "label": "批次管理"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "link": 170,
+          "slot_index": 4,
+          "widget": {
+            "name": "frame_rate"
+          },
+          "label": "帧率"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3,
+          "label": "文件名"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 10,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "image/webp",
+        "pingpong": false,
+        "save_output": false,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00009.webp",
+            "subfolder": "",
+            "type": "temp",
+            "format": "image/webp",
+            "frame_rate": 15
+          }
+        }
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 82,
+      "type": "PreviewImage",
+      "pos": [
+        234.18612623994997,
+        1041.2641825274125
+      ],
+      "size": [
+        429.47771640200267,
+        370.83594752477364
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 174,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 67,
+      "type": "PreviewImage",
+      "pos": [
+        760.1861262399495,
+        1049.2641825274125
+      ],
+      "size": [
+        778.2452509597847,
+        393.94587832616776
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 163,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 88,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        759.1861262399495,
+        1492.2641825274127
+      ],
+      "size": [
+        789.7291381082932,
+        236.74530807962037
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 184,
+          "label": "图像"
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 180,
+          "label": "音频"
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "label": "批次管理"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "link": 201,
+          "widget": {
+            "name": "frame_rate"
+          },
+          "label": "帧率"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3,
+          "label": "文件名"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 15,
+        "loop_count": 4,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00073-audio.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 15
+          }
+        }
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 96,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        26.186126239949317,
+        1505.264182527413
+      ],
+      "size": [
+        700.6251216572623,
+        301.07763441294446
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 200,
+          "label": "图像"
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 199,
+          "label": "音频"
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "label": "批次管理"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "link": 202,
+          "widget": {
+            "name": "frame_rate"
+          },
+          "label": "帧率"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3,
+          "label": "文件名"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 15,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00074-audio.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 15
+          }
+        }
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 80,
+      "type": "PreviewImage",
+      "pos": [
+        1576.282710528141,
+        1028.4949723060672
+      ],
+      "size": [
+        709.6899261150543,
+        403.9943571009446
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 172,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 69,
+      "type": "DiffusersScheduler",
+      "pos": [
+        -1909.5141675544476,
+        1018.6161862768299
+      ],
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "scheduler",
+          "type": "DIFFUSERS_SCHEDULER",
+          "links": [
+            164
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "scheduler"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DiffusersScheduler"
+      },
+      "widgets_values": [
+        "EulerDiscreteScheduler",
+        0.002,
+        700,
+        false
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 57,
+      "type": "MimicMotionSampler",
+      "pos": [
+        -1889.5141675544476,
+        1205.6161862768304
+      ],
+      "size": {
+        "0": 315,
+        "1": 430
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mimic_pipeline",
+          "type": "MIMICPIPE",
+          "link": 146,
+          "label": "mimic_pipeline"
+        },
+        {
+          "name": "ref_image",
+          "type": "IMAGE",
+          "link": 158,
+          "label": "ref_image"
+        },
+        {
+          "name": "pose_images",
+          "type": "IMAGE",
+          "link": 160,
+          "label": "pose_images"
+        },
+        {
+          "name": "optional_scheduler",
+          "type": "DIFFUSERS_SCHEDULER",
+          "link": 164,
+          "label": "optional_scheduler"
+        },
+        {
+          "name": "fps",
+          "type": "INT",
+          "link": 167,
+          "widget": {
+            "name": "fps"
+          },
+          "label": "fps"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "links": [
+            149
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "samples"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MimicMotionSampler"
+      },
+      "widgets_values": [
+        25,
+        2,
+        2,
+        783251985030815,
+        "randomize",
+        15,
+        0,
+        16,
+        6,
+        false,
+        1,
+        0,
+        1,
+        1
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 63,
+      "type": "LayerUtility: ImageScaleByAspectRatio V2",
+      "pos": [
+        -2263.5141675544473,
+        1004.6161862768299
+      ],
+      "size": {
+        "0": 336,
+        "1": 518
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 152,
+          "label": "图像"
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": null,
+          "label": "遮罩"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            153,
+            156,
+            192
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        },
+        {
+          "name": "original_size",
+          "type": "BOX",
+          "links": null,
+          "shape": 3,
+          "label": "原始大小"
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LayerUtility: ImageScaleByAspectRatio V2"
+      },
+      "widgets_values": [
+        "original",
+        1,
+        1,
+        "crop",
+        "lanczos",
+        "8",
+        "longest",
+        1024,
+        "#000000"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 85,
+      "type": "DownloadAndLoadLivePortraitModels",
+      "pos": [
+        -1547.5141675544476,
+        1039.6161862768304
+      ],
+      "size": {
+        "0": 243.60000610351562,
+        "1": 82
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "live_portrait_pipe",
+          "type": "LIVEPORTRAITPIPE",
+          "links": [
+            176
+          ],
+          "shape": 3,
+          "label": "live_portrait_pipe"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DownloadAndLoadLivePortraitModels"
+      },
+      "widgets_values": [
+        "auto",
+        "human"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 84,
+      "type": "LivePortraitProcess",
+      "pos": [
+        -1531.5141675544476,
+        1177.6161862768304
+      ],
+      "size": {
+        "0": 296.6207580566406,
+        "1": 338
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipeline",
+          "type": "LIVEPORTRAITPIPE",
+          "link": 176,
+          "slot_index": 0,
+          "label": "pipeline"
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": 209,
+          "label": "source_image"
+        },
+        {
+          "name": "driving_images",
+          "type": "IMAGE",
+          "link": 210,
+          "label": "driving_images"
+        },
+        {
+          "name": "driving_images",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "opt_retargeting_info",
+          "type": "RETARGETINGINFO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "cropped_images",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 3,
+          "label": "cropped_images"
+        },
+        {
+          "name": "full_images",
+          "type": "IMAGE",
+          "links": [
+            179,
+            183
+          ],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "full_images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LivePortraitProcess"
+      },
+      "widgets_values": [
+        512,
+        2.3,
+        0,
+        -1,
+        true,
+        true,
+        1,
+        true,
+        1
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 2,
+      "type": "DownloadAndLoadMimicMotionModel",
+      "pos": [
+        -1215.514167554447,
+        1046.6161862768304
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "mimic_pipeline",
+          "type": "MIMICPIPE",
+          "links": [
+            146,
+            150
+          ],
+          "shape": 3,
+          "label": "mimic_pipeline"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DownloadAndLoadMimicMotionModel"
+      },
+      "widgets_values": [
+        "MimicMotion-fp16.safetensors",
+        "fp16"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 58,
+      "type": "MimicMotionDecode",
+      "pos": [
+        -1201.514167554447,
+        1194.6161862768304
+      ],
+      "size": {
+        "0": 210,
+        "1": 78
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mimic_pipeline",
+          "type": "MIMICPIPE",
+          "link": 150,
+          "slot_index": 0,
+          "label": "mimic_pipeline"
+        },
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 149,
+          "label": "samples"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            174,
+            175,
+            193,
+            203
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MimicMotionDecode"
+      },
+      "widgets_values": [
+        4
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 42,
+      "type": "MimicMotionGetPoses",
+      "pos": [
+        -1191.514167554447,
+        1343.6161862768304
+      ],
+      "size": {
+        "0": 220,
+        "1": 126
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ref_image",
+          "type": "IMAGE",
+          "link": 155,
+          "label": "ref_image"
+        },
+        {
+          "name": "pose_images",
+          "type": "IMAGE",
+          "link": 156,
+          "label": "pose_images"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "poses_with_ref",
+          "type": "IMAGE",
+          "links": [
+            114,
+            160
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "poses_with_ref"
+        },
+        {
+          "name": "pose_images",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "pose_images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MimicMotionGetPoses"
+      },
+      "widgets_values": [
+        true,
+        true,
+        true
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 64,
+      "type": "LayerUtility: ImageMaskScaleAs",
+      "pos": [
+        -946.5141675544468,
+        1288.6161862768304
+      ],
+      "size": {
+        "0": 252,
+        "1": 162
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "scale_as",
+          "type": "*",
+          "link": 153,
+          "label": "参考大小"
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 154,
+          "label": "图像"
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": null,
+          "label": "遮罩"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            155,
+            158,
+            172,
+            191
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        },
+        {
+          "name": "original_size",
+          "type": "BOX",
+          "links": null,
+          "shape": 3,
+          "label": "原始大小"
+        },
+        {
+          "name": "widht",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LayerUtility: ImageMaskScaleAs"
+      },
+      "widgets_values": [
+        "crop",
+        "lanczos"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 66,
+      "type": "easy showAnything",
+      "pos": [
+        -664.514167554447,
+        1306.6161862768304
+      ],
+      "size": {
+        "0": 210,
+        "1": 158.94273376464844
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 162,
+          "label": "输入任何"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "{\"source_fps\": 30.0, \"source_frame_count\": 354, \"source_duration\": 11.8, \"source_width\": 1080, \"source_height\": 1916, \"loaded_fps\": 15.0, \"loaded_frame_count\": 100, \"loaded_duration\": 6.666666666666667, \"loaded_width\": 1080, \"loaded_height\": 1916}"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 94,
+      "type": "ImageConcatMulti",
+      "pos": [
+        -849.5141675544468,
+        1021.6161862768301
+      ],
+      "size": {
+        "0": 210,
+        "1": 210
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_1",
+          "type": "IMAGE",
+          "link": 191,
+          "label": "image_1"
+        },
+        {
+          "name": "image_2",
+          "type": "IMAGE",
+          "link": 192,
+          "label": "image_2"
+        },
+        {
+          "name": "image_3",
+          "type": "IMAGE",
+          "link": 193,
+          "label": "image_3"
+        },
+        {
+          "name": "image_4",
+          "type": "IMAGE",
+          "link": 197,
+          "label": "image_4"
+        },
+        {
+          "name": "image_5",
+          "type": "IMAGE",
+          "link": 198,
+          "label": "image_5"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            200
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "images"
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        5,
+        "right",
+        false,
+        null
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 95,
+      "type": "LayerUtility: ImageMaskScaleAs",
+      "pos": [
+        -611.5141675544472,
+        1052.6161862768304
+      ],
+      "size": {
+        "0": 315,
+        "1": 162
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "scale_as",
+          "type": "*",
+          "link": 196,
+          "label": "参考大小"
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 195,
+          "label": "图像"
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": null,
+          "label": "遮罩"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            197
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        },
+        {
+          "name": "original_size",
+          "type": "BOX",
+          "links": null,
+          "shape": 3,
+          "label": "原始大小"
+        },
+        {
+          "name": "widht",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LayerUtility: ImageMaskScaleAs"
+      },
+      "widgets_values": [
+        "letterbox",
+        "lanczos"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 90,
+      "type": "ImageListToImageBatch",
+      "pos": [
+        -547,
+        445
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 183,
+          "label": "图像"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            184,
+            196,
+            198
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageListToImageBatch"
+      }
+    },
+    {
+      "id": 65,
+      "type": "easy showAnything",
+      "pos": [
+        -2221,
+        1571
+      ],
+      "size": {
+        "0": 210,
+        "1": 76
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 161,
+          "label": "输入任何"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "100"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 87,
+      "type": "PreviewImage",
+      "pos": [
+        -196,
+        1033
+      ],
+      "size": [
+        412.6350145077697,
+        380.5533286884658
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 179,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      114,
+      42,
+      0,
+      37,
+      0,
+      "IMAGE"
+    ],
+    [
+      146,
+      2,
+      0,
+      57,
+      0,
+      "MIMICPIPE"
+    ],
+    [
+      149,
+      57,
+      0,
+      58,
+      1,
+      "LATENT"
+    ],
+    [
+      150,
+      2,
+      0,
+      58,
+      0,
+      "MIMICPIPE"
+    ],
+    [
+      152,
+      5,
+      0,
+      63,
+      0,
+      "IMAGE"
+    ],
+    [
+      153,
+      63,
+      0,
+      64,
+      0,
+      "*"
+    ],
+    [
+      154,
+      3,
+      0,
+      64,
+      1,
+      "IMAGE"
+    ],
+    [
+      155,
+      64,
+      0,
+      42,
+      0,
+      "IMAGE"
+    ],
+    [
+      156,
+      63,
+      0,
+      42,
+      1,
+      "IMAGE"
+    ],
+    [
+      158,
+      64,
+      0,
+      57,
+      1,
+      "IMAGE"
+    ],
+    [
+      160,
+      42,
+      0,
+      57,
+      2,
+      "IMAGE"
+    ],
+    [
+      161,
+      5,
+      1,
+      65,
+      0,
+      "*"
+    ],
+    [
+      162,
+      5,
+      3,
+      66,
+      0,
+      "*"
+    ],
+    [
+      163,
+      5,
+      0,
+      67,
+      0,
+      "IMAGE"
+    ],
+    [
+      164,
+      69,
+      0,
+      57,
+      3,
+      "DIFFUSERS_SCHEDULER"
+    ],
+    [
+      167,
+      73,
+      0,
+      57,
+      4,
+      "INT"
+    ],
+    [
+      169,
+      73,
+      0,
+      75,
+      0,
+      "INT"
+    ],
+    [
+      170,
+      75,
+      0,
+      37,
+      4,
+      "FLOAT"
+    ],
+    [
+      172,
+      64,
+      0,
+      80,
+      0,
+      "IMAGE"
+    ],
+    [
+      174,
+      58,
+      0,
+      82,
+      0,
+      "IMAGE"
+    ],
+    [
+      175,
+      58,
+      0,
+      83,
+      0,
+      "IMAGE"
+    ],
+    [
+      176,
+      85,
+      0,
+      84,
+      0,
+      "LIVEPORTRAITPIPE"
+    ],
+    [
+      179,
+      84,
+      1,
+      87,
+      0,
+      "IMAGE"
+    ],
+    [
+      180,
+      89,
+      2,
+      88,
+      1,
+      "AUDIO"
+    ],
+    [
+      183,
+      84,
+      1,
+      90,
+      0,
+      "IMAGE"
+    ],
+    [
+      184,
+      90,
+      0,
+      88,
+      0,
+      "IMAGE"
+    ],
+    [
+      185,
+      89,
+      0,
+      91,
+      0,
+      "IMAGE"
+    ],
+    [
+      187,
+      92,
+      0,
+      89,
+      2,
+      "INT"
+    ],
+    [
+      188,
+      92,
+      0,
+      5,
+      2,
+      "INT"
+    ],
+    [
+      189,
+      93,
+      0,
+      89,
+      3,
+      "INT"
+    ],
+    [
+      190,
+      93,
+      0,
+      5,
+      3,
+      "INT"
+    ],
+    [
+      191,
+      64,
+      0,
+      94,
+      0,
+      "IMAGE"
+    ],
+    [
+      192,
+      63,
+      0,
+      94,
+      1,
+      "IMAGE"
+    ],
+    [
+      193,
+      58,
+      0,
+      94,
+      2,
+      "IMAGE"
+    ],
+    [
+      195,
+      89,
+      0,
+      95,
+      1,
+      "IMAGE"
+    ],
+    [
+      196,
+      90,
+      0,
+      95,
+      0,
+      "*"
+    ],
+    [
+      197,
+      95,
+      0,
+      94,
+      3,
+      "IMAGE"
+    ],
+    [
+      198,
+      90,
+      0,
+      94,
+      4,
+      "IMAGE"
+    ],
+    [
+      199,
+      89,
+      2,
+      96,
+      1,
+      "AUDIO"
+    ],
+    [
+      200,
+      94,
+      0,
+      96,
+      0,
+      "IMAGE"
+    ],
+    [
+      201,
+      75,
+      0,
+      88,
+      4,
+      "FLOAT"
+    ],
+    [
+      202,
+      75,
+      0,
+      96,
+      4,
+      "FLOAT"
+    ],
+    [
+      203,
+      58,
+      0,
+      98,
+      0,
+      "IMAGE"
+    ],
+    [
+      204,
+      75,
+      0,
+      98,
+      4,
+      "FLOAT"
+    ],
+    [
+      209,
+      83,
+      0,
+      84,
+      1,
+      "IMAGE"
+    ],
+    [
+      210,
+      91,
+      0,
+      84,
+      2,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Frame rate adjustment",
+      "bounding": [
+        -2596,
+        1108,
+        249,
+        148
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Frame number selection",
+      "bounding": [
+        -2598,
+        1264,
+        254,
+        160
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "force frame",
+      "bounding": [
+        -2597,
+        957,
+        245,
+        143
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Liveportrait Driving Video",
+      "bounding": [
+        -3223,
+        869,
+        578,
+        755
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Driving action video",
+      "bounding": [
+        -3755,
+        870,
+        518,
+        753
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "load image",
+      "bounding": [
+        -4335,
+        870,
+        564,
+        754
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Output",
+      "bounding": [
+        -205,
+        857,
+        2713,
+        1417
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Settings",
+      "bounding": [
+        -2289,
+        858,
+        2055,
+        904
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.40909090909091356,
+      "offset": [
+        4581.332741631144,
+        -39.14409510528549
+      ]
+    },
+    "info": {
+      "name": "workflow",
+      "author": "",
+      "description": "",
+      "version": "1",
+      "created": "2024-09-07T19:04:32.037Z",
+      "modified": "2024-09-07T19:04:32.037Z",
+      "software": "ComfyUI"
+    },
+    "workspace_info": {
+      "id": "9erK4BKb_3ciZ3VHC6gyV",
+      "saveLock": false,
+      "cloudID": null,
+      "coverMediaPath": null
+    }
+  },
+  "version": 0.4
+}
